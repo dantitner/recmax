@@ -1,0 +1,11 @@
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.csprojAssemblyReference.cache
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.csproj.CoreCompileInputs.cache
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.AssemblyInfoInputs.cache
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.AssemblyInfo.cs
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\bin\Debug\netcoreapp2.1\RecMax.deps.json
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\bin\Debug\netcoreapp2.1\RecMax.runtimeconfig.json
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\bin\Debug\netcoreapp2.1\RecMax.runtimeconfig.dev.json
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\bin\Debug\netcoreapp2.1\RecMax.dll
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\bin\Debug\netcoreapp2.1\RecMax.pdb
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.dll
+C:\Users\Daniil_Prokhorovich\source\repos\RecMax\RecMax\obj\Debug\netcoreapp2.1\RecMax.pdb
