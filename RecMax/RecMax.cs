@@ -13,9 +13,8 @@ namespace RecMax
         /// </summary>
         public void Start()
         {
-            int length;
             Console.WriteLine("Enter array length:");
-            length = Convert.ToInt32(Console.ReadLine());
+            int length = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Generated array: ");
             //генерация массива
             randomArray = randomArray.GenerateArray(length);
