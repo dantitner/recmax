@@ -20,15 +20,24 @@ namespace RecMax
             //генерация массива
             randomArray = randomArray.GenerateArray(length);
             Console.WriteLine(randomArray.Print());
-            Console.WriteLine("Max: " + randomArray.MaxRec());
+            Console.WriteLine("Max: " + randomArray.MaxRec(randomArray[0]));
             Console.ReadKey();
         }
+
+
     }
 
     public static class Extension
     {
         static Random r = new Random();
-        public static int[] GenerateArray(this int[] array, int length)
+
+        /// <summary>
+        /// генерация позитивного массива
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static int[] GenerateArrayPos(this int[] array, int length)
         {
             array = new int[length];
 
@@ -40,8 +49,26 @@ namespace RecMax
             return array;
         }
 
-        public static int? MaxRec(this int[] array)
+        /// <summary>
+        /// генерация массива
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static int[] GenerateArray(this int[] array, int length)
         {
+            array = new int[length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = r.Next(-100, 100);
+            }
+
+            return array;
+        }
+
+        public static int? MaxRecPos(this int[] array)
+        {       
             //первый положительный элемент и его индекс
             int subject = array.First(n => n > 0);
             int subjectIndex = Array.IndexOf(array, subject);
@@ -66,16 +93,41 @@ namespace RecMax
             if (subject > array[ nextPositive])
             {
                 array[nextPositive] = -array[nextPositive];
-                subject = (int)MaxRec(array);
+                subject = (int)MaxRecPos(array);
             }
             else
             {
                 array[subjectIndex] = -array[subjectIndex];
-                subject = (int)MaxRec(array);
+                subject = (int)MaxRecPos(array);
             }
 
             return subject;
         }
+
+        public static int? MaxRec(this int[] array, int subject)
+        {
+            if (array.Length > 2)
+            {
+                int[] newarrray = array.CloneFrom(1, array.Length - 1);
+
+                if (subject < array[1])
+                {
+                    subject = array[1];
+                }
+                subject = (int)MaxRec(newarrray, subject);
+            }
+            else if (array.Length == 2)
+            {
+                if (subject < array[1])
+                {
+                    subject = array[1];
+                }
+            }
+
+            return subject;
+        }
+
+        
         /// <summary>
         /// Создать строку из массива
         /// </summary>
@@ -92,6 +144,19 @@ namespace RecMax
             }
 
             return result;
+        }
+
+        public static int[] CloneFrom(this int[] array, int start, int end)
+        {
+            int[] newarray = new int[end-start+1];
+            int j = start;
+            for (int i = 0; i < end-start+1; i++)
+            {
+                newarray[i] = array[j];
+                j++;
+            }
+            return newarray;
+            
         }
 
     }
