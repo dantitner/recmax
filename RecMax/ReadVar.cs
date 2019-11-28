@@ -19,5 +19,11 @@ namespace RecMax
             }
             return variable;
         }
+
+        public static string ReadString()
+        {
+            Console.WriteLine("Enter line");
+            return Console.ReadLine();
+        }
     }
 }
