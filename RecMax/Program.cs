@@ -15,6 +15,7 @@ namespace RecMax
             Console.WriteLine("Left/Right elements equal - 2");
             Console.WriteLine("String concat - 3");
             Console.WriteLine("Next number - 4");
+            Console.WriteLine("Find numbers with digit - 5");
 
             string responce = Console.ReadLine();
             switch (responce)
@@ -34,6 +35,10 @@ namespace RecMax
                 case "4":
                     NextNumber obj4 = new NextNumber();
                     obj4.Start();
+                    break;
+                case "5":
+                    NumOutOfDig obj5 = new NumOutOfDig();
+                    obj5.Start();
                     break;
                 default:
                     ChooseTask();
